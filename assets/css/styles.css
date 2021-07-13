@@ -41,6 +41,10 @@ section {
   padding: 100px 80px;
 }
 
+section:not(.hero):nth-child(even) {
+  background-color: #f5f5f5;
+}
+
 .grid {
   width:100%;
   display: flex;
@@ -170,8 +174,18 @@ header nav li {
   flex-basis: 70%;
 }
 
+/* PACKAGES SECTION */
 
+.packages .grid li {
+  padding: 50px;
+  flex-basis: 50%;
+  text-align: center;
+}
 
+.packages .grid li h4 {
+  font-size: 30px;
+  margin: 25px 0;
+}
 
 
 
