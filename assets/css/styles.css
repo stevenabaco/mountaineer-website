@@ -17,7 +17,7 @@ nav {
 
 a {
 	text-decoration: none;
-	opacity: 0.75;
+	opacity: 0.65;
 	color: white;
 }
 
@@ -75,6 +75,11 @@ section p {
 	text-align: center;
 }
 
+@media (max-width: 800px) {
+	section {
+		padding: 50px 20;
+	}
+}
 /* HEADER STYLES */
 
 header {
@@ -108,6 +113,15 @@ header nav li {
 	margin: 0 15px;
 }
 
+@media (max-width: 800px) {
+	header {
+		padding: 20px 50px;
+		flex-direction: column;
+	}
+	 header h2 {
+		 margin-bottom: 15px;
+	 }
+}
 /* Hero Styles */
 
 .hero {
@@ -145,6 +159,7 @@ header nav li {
 
 .hero-content-area {
 	opacity: 0;
+	padding: 50px;
 	margin-top: 100px;
 	animation: 1s slidefade 1s forwards;
 }
@@ -156,6 +171,23 @@ header nav li {
 	}
 }
 
+@media (max-width: 800px) {
+	.hero{
+		min-height: 600 px;
+	}
+
+	.hero h1 {
+		font-size: 48px;
+	}
+
+	.hero h3 {
+		font-size: 24px;
+	}
+
+	.hero a.btn {
+		padding: 15px 40px;
+	}
+}
 /* DESTINATIONS SECTION */
 
 .destinations .grid li {
@@ -174,6 +206,19 @@ header nav li {
 	flex-basis: 70%;
 }
 
+@media (max-width: 1100px) {
+	.destinations .grid li.small,
+	.destinations .grid li.large {
+		flex-basis: 50%;
+	} 
+}
+@media (max-width: 800px) {
+	.destinations .grid li.small,
+	.destinations .grid li.large {
+		flex-basis: 100%;
+	} 
+}
+
 /* PACKAGES SECTION */
 
 .packages .grid li {
@@ -187,6 +232,12 @@ header nav li {
 	margin: 25px 0;
 }
 
+@media (max-width: 800px) {
+	.packages .grid li {
+		flex-basis: 100%;
+		padding: 20px;
+	}
+}
 /* TESTIMONIALS SECTION */
 
 .testimonials .quote {
@@ -196,6 +247,12 @@ header nav li {
   margin: 40px 0 25px;
 }
 
+@media (max-width: 800px) {
+	.testimonials .quote {
+		font-size: 18px;
+		margin: 15px 0;
+	}
+}
 /* CONTACT SECTION */
 
 .contact form {
@@ -203,7 +260,7 @@ header nav li {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 45%;
+  width: 50%;
 }
 
 .contact form .btn {
@@ -211,9 +268,56 @@ header nav li {
 }
 
 .contact form input {
-  padding: 18px;
+  padding: 15px;
   margin-right: 30px;
   font-size: 18px;
   color: #555;
   flex: 1
+}
+
+@media (max-width: 1000px) {
+	.contact form input {
+		flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+}
+
+/* FOOTER SECTION */
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #607d8b;
+	color: #fff;
+	padding: 20px 0;
+}
+
+footer ul {
+	display: flex;
+}
+
+footer ul li{
+	margin-left: 16px;
+}
+
+footer p {
+	text-transform: uppercase;
+	font-size: 14px;
+	opacity: 0.6;
+	align-self: center;
+}
+
+@media (max-width: 1100px) {
+	footer {
+		flex-direction: column;
+		padding: 10% 30%
+	}
+	footer p {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	footer ul li {
+		margin: 0 8px;
+	}
 }
